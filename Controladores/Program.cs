@@ -79,16 +79,7 @@ namespace Ejrc3ModificarCliente.Controladores
 
                     case 3:
                         Console.WriteLine("\n\t");
-                        Console.WriteLine("Introduzca su DNI: ");
-                        string dni = Convert.ToString(Console.ReadLine());
-                        foreach (ClienteDto2 cliente2 in listaCliente2)
-                        {
-                            if (dni == cliente2.Dni)
-                            {
-                                Console.WriteLine(listaCliente); 
-                            }   
-                            
-                        }
+                        mi.modificarCliente(listaCliente2);
                         break;
 
                     case 4:
@@ -99,9 +90,9 @@ namespace Ejrc3ModificarCliente.Controladores
                     case 5:
                         Console.WriteLine("\n\tMostar clientes registrados en banco");
                         Console.Clear();
-                        foreach (ClienteDto2 cliente in listaCliente2)
+                        foreach (ClienteDto2 cliente2 in listaCliente2)
                         {
-                            Console.WriteLine(cliente.ToString());
+                            Console.WriteLine(cliente2.ToString());
                             Console.WriteLine("\n");
                         }
 

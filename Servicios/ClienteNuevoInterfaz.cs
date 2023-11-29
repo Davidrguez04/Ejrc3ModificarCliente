@@ -11,6 +11,9 @@ namespace Ejrc3ModificarCliente.Servicios
     {
         public void darAltaClienteNuevo(List<ClienteDto2> listaAntigua);
         public void borrarCliente(List<ClienteDto2> listaAntigua);
-       
+
+        public void modificarCliente(List<ClienteDto2> listaAntigua);
+
+
     }
 }

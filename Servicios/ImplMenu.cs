@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ejrc3ModificarCliente.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,33 @@ namespace Ejrc3ModificarCliente.Servicios
             string dniCliente = Console.ReadLine();
 
             return dniCliente;
+        }
+        public long pedirId()
+        {
+            ClienteDto2 nuevoCliente= new ClienteDto2();    
+            Console.WriteLine("Indica el Id del cliente: ");
+            nuevoCliente.Id = Convert.ToInt64(Console.ReadLine());
+
+            return nuevoCliente.Id;
+        }
+
+        public int mostrarMenuCampos()
+        {
+
+            int opcion;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\t\t\t\t--------------------------------");
+            Console.WriteLine("\t\t\t\t|\tCampos:            ");
+            Console.WriteLine("\t\t\t\t|0.-Salir                     ");
+            Console.WriteLine("\t\t\t\t|1.-IBAN                     ");
+            Console.WriteLine("\t\t\t\t|2.- ID                    ");
+            Console.WriteLine("\t\t\t\t|3.-Fecha Baja            ");
+            Console.WriteLine("\t\t\t\t|4.-FechaAlta            ");
+            Console.Write("\n\tSeleccione un campo: ");
+
+            opcion = Console.ReadKey(true).KeyChar - ('0');
+
+            return opcion;
         }
     }
 }

@@ -22,5 +22,9 @@ namespace Ejrc3ModificarCliente.Servicios
         public int mostrarMenu();
 
         public string pedirDni();
+
+        public int mostrarMenuCampos();
+
+        public long pedirId();
     }
 }
